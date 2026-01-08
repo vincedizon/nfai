@@ -1,28 +1,16 @@
-<header class="navbar">
-  <div class="logo">
-    <h1>{{ title() }}</h1>
+<nav class="navbar">
+  <div class="logo" routerLink="/home">
+    RESEARCH<span style="color: var(--accent-gold);">CONF</span>
   </div>
-  <nav>
-    <ul>
-      <li>
-        <a routerLink="/"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact: true}">Home</a>
-      </li>
 
-      <li>
-        <a routerLink="/directives"
-           routerLinkActive="active">Directives</a>
-      </li>
+  <div class="nav-links">
+    <a routerLink="/home" routerLinkActive="active-link">Home</a>
+    <a routerLink="/partners" routerLinkActive="active-link">Our Partners</a>
+    <a routerLink="/about" routerLinkActive="active-link">About</a>
+    <a routerLink="/join-us" routerLinkActive="active-link">Join Us!</a>
+  </div>
+</nav>
 
-      <li>
-        <a routerLink="/data-binding"
-           routerLinkActive="active">Data Binding</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<main>
+<main style="padding: 2rem 10%;">
   <router-outlet></router-outlet>
 </main>

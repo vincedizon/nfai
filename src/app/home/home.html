@@ -1,10 +1,22 @@
-<main>
-    <section class="hero-section">
-        <div class="hero-text-content">
-            <h3 class="intro-tag">Hello, I'm</h3>
-            <h1 class="hero-name">MAVERICK VINCE G DIZON</h1>
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');">
+    <div class="banner-content">
+        <h1 class="display-3 fw-bold">Research Conferences</h1>
+        <h2 class="mb-4">Join our online events this 2026!</h2>
+        <p class="lead">Early-Bird Registration</p>
+    </div>
+</div>
 
-    <p class="hero-title">
-        <span class="highlight">IT Web Development Student</span>
-            | 20 y/o | Currently seeking Internships
-    </p>
+<div class="home-container">
+  <div class="city-grid">
+    <div class="city-card" *ngFor="let city of cities">
+      <div class="image-wrapper">
+        <img [src]="city.imageUrl" [alt]="city.name">
+      </div>
+      <div class="card-content">
+        <h3>{{ city.name }}</h3>
+        <p>{{ city.desc }}</p>
+        <button class="btn-explore">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+
+.banner {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding-left: 10%;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    text-align: left;
+    animation: slideInLeft 1s ease-out;
+}
+
+.banner-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #fdbb2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Clean Content Section --- */
+.about-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.mission-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.lead-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #64748b;
+    border-left: 4px solid #fdbb2d;
+    padding-left: 30px;
+}
+
+/* --- Premium CTA Button --- */
+.gift-container {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+.btn-gift {
+    background: #1a2a6c;
+    color: #fdbb2d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(26, 42, 108, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-gift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(26, 42, 108, 0.3);
+    background: #fdbb2d;
+    color: #1a2a6c;
+}
+
+/* --- Animations --- */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}

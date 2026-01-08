@@ -1,0 +1,72 @@
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000');">
+    <div class="banner-content">
+        <h1>Our Partners</h1>
+        <p>Strategic corporate alliances for the 2026 Research Conference.</p>
+    </div>
+</div>
+
+<div class="container main-content">
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number">04</span>
+            <span class="stat-label">Platinum Partners</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Gold Sponsors</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Global Affiliates</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Partner Spotlight</h2>
+    <div class="spotlight-grid">
+        <div class="spotlight-card platinum-glow">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+            <div class="tier-label">Platinum Sponsor</div>
+        </div>
+        <div class="spotlight-card platinum-glow">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            <div class="tier-label">Platinum Sponsor</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Strategic Corporate Partners</h2>
+    <div class="custom-table-container">
+        <table class="table custom-table align-middle mb-0">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th class="text-center">Trademark</th>
+                    <th>Sponsorship Level</th>
+                    <th class="text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of partners">
+                    <td class="company-name">{{ p.company }}</td>
+                    <td class="text-center">
+                        <img [src]="p.logo" class="partner-logo" [alt]="p.company">
+                    </td>
+                    <td>
+                        <span class="badge-tier" [ngClass]="p.sponsorship.toLowerCase()">
+                            {{ p.sponsorship }}
+                        </span>
+                    </td>
+                    <td class="text-end">
+                        <a href="#" class="visit-link">Visit Site</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<button class="fab-sponsor">
+    <span class="fab-icon">+</span>
+    <span class="fab-text">Become a Partner</span>
+</button>

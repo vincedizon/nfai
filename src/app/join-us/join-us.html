@@ -1,0 +1,50 @@
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000');">
+    <div class="banner-content">
+        <h1>Global Network</h1>
+        <p>Join the world's most innovative academic community.</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="col-lg-9 mx-auto form-wrapper">
+        <div class="form-header-line"></div>
+        <div class="section-label">
+            <span>01</span> Personal Identity
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 input-group-custom">
+                <label>First Name</label>
+                <input type="text" [(ngModel)]="firstName" class="form-control" placeholder="John">
+                <div class="data-badge" *ngIf="firstName">Current: {{ firstName }}</div>
+            </div>
+            <div class="col-md-6 input-group-custom">
+                <label>Last Name</label>
+                <input type="text" [(ngModel)]="lastName" class="form-control" placeholder="Doe">
+                <div class="data-badge" *ngIf="lastName">Current: {{ lastName }}</div>
+            </div>
+        </div>
+
+        <div class="section-label mt-4">
+            <span>02</span> Professional Credentials
+        </div>
+
+        <div class="input-group-custom">
+            <label>Email Address</label>
+            <input type="email" [(ngModel)]="email" class="form-control" placeholder="john.doe@university.edu">
+            <div class="data-badge" *ngIf="email && email.trim()">Linked to: {{ email }}</div>
+        </div>
+
+        <div class="input-group-custom">
+            <label>Institution / Affiliation</label>
+            <input type="text" [(ngModel)]="institution" class="form-control">
+            <div class="data-badge">Verified as: {{ institution }}</div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <button class="btn-submit">Complete Registration</button>
+            </div>
+        </div>
+    </div>
+</div>

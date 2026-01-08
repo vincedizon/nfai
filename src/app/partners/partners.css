@@ -1,0 +1,134 @@
+
+.main-content { margin-bottom: 100px; }
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-content {
+  background: rgba(15, 23, 42, 0.75);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-content h1 { font-family: 'Montserrat'; font-size: 3.5rem; font-weight: 800; }
+
+/* --- Stats Bar --- */
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: -50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.stat-number { display: block; font-size: 1.8rem; font-weight: 800; color: #1a2a6c; font-family: 'Montserrat'; }
+.stat-label { font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 600; }
+.stat-divider { width: 1px; height: 40px; background: #e2e8f0; }
+
+/* --- Spotlight Cards --- */
+.section-title {
+  text-align: center;
+  font-family: 'Montserrat';
+  color: #1a2a6c;
+  font-weight: 800;
+  margin: 60px 0 30px;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+.spotlight-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid #edf2f7;
+}
+
+.spotlight-card img { height: 60px; margin-bottom: 20px; object-fit: contain; }
+.platinum-glow:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(26, 42, 108, 0.1);
+  border-color: #1a2a6c;
+}
+
+.tier-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #64748b; letter-spacing: 1px; }
+
+/* --- Table Styles --- */
+.custom-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  overflow: hidden;
+  border: 1px solid #edf2f7;
+}
+
+.custom-table thead th {
+  background: #f8fafd;
+  font-family: 'Montserrat';
+  font-size: 0.75rem;
+  padding: 20px;
+  color: #4a5568;
+}
+
+.custom-table tbody tr { transition: all 0.2s; }
+.custom-table tbody tr:hover { background: #f8fafc; box-shadow: inset 4px 0 0 #fdbb2d; }
+
+.partner-logo { max-height: 35px; filter: grayscale(100%); opacity: 0.6; transition: 0.3s; }
+tr:hover .partner-logo { filter: grayscale(0%); opacity: 1; }
+
+.badge-tier {
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  min-width: 90px;
+  display: inline-block;
+  text-align: center;
+}
+
+.platinum { background: #e2e8f0; color: #475569; }
+.gold { background: #fff3d6; color: #b7791f; }
+.silver { background: #f1f5f9; color: #64748b; }
+
+/* --- FAB --- */
+.fab-sponsor {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #1a2a6c;
+  color: #fdbb2d;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fab-sponsor:hover { transform: scale(1.05) translateY(-5px); background: #fdbb2d; color: #1a2a6c; }
